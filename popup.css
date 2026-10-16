@@ -1,0 +1,120 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  width: 380px;
+  max-height: 560px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #161616;
+  color: #f0f0f0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: #1f1f1f;
+  border-bottom: 1px solid #2c2c2c;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.title { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; }
+.logo { font-size: 18px; }
+
+#refresh {
+  background: #2c2c2c;
+  color: #fff;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#refresh:hover { background: #3a3a3a; }
+
+.status {
+  padding: 10px 14px;
+  font-size: 12px;
+  color: #9a9a9a;
+  border-bottom: 1px solid #242424;
+}
+
+.list { list-style: none; overflow-y: auto; max-height: 400px; }
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #242424;
+}
+.item:hover { background: #1d1d1d; }
+
+.item-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+
+.item-name {
+  font-size: 13px;
+  font-weight: 600;
+  word-break: break-all;
+  line-height: 1.3;
+  cursor: pointer;
+}
+.item-name:hover { color: #ff7a7a; }
+
+.badges { display: flex; flex-wrap: wrap; gap: 5px; }
+.badge {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 20px;
+  background: #2c2c2c;
+  color: #cfcfcf;
+  white-space: nowrap;
+}
+.badge.type { background: #2a3b56; color: #9ec5ff; }
+.badge.quality { background: #2a4a2f; color: #9ff0a8; }
+.badge.stream { background: #5a3a1f; color: #ffce9e; }
+.badge.net { background: #3a2a4a; color: #d9aaff; }
+
+.item-actions { display: flex; gap: 8px; }
+
+button.dl {
+  flex: 1;
+  padding: 8px;
+  background: #e23b3b;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+button.dl:hover { background: #c82828; }
+button.dl.secondary { background: #2c2c2c; flex: 0 0 auto; }
+button.dl.secondary:hover { background: #3a3a3a; }
+
+.empty {
+  padding: 30px 16px;
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.note {
+  font-size: 11px;
+  color: #d8a14a;
+  line-height: 1.4;
+}
+
+footer {
+  padding: 10px 14px;
+  background: #1b1b1b;
+  border-top: 1px solid #2c2c2c;
+  color: #888;
+  font-size: 11px;
+  line-height: 1.4;
+}
